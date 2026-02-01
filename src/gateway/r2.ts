@@ -60,8 +60,7 @@ export async function mountR2Storage(sandbox: Sandbox, env: MoltbotEnv): Promise
             console.log('Cleanup warning (non-fatal):', cleanupErr);
       }
     console.log('Mounting R2 bucket at', R2_MOUNT_PATH);
-    await sandbox.48
-      (R2_BUCKET_NAME, R2_MOUNT_PATH, {
+    await sandbox.mountBucket( (R2_BUCKET_NAME, R2_MOUNT_PATH, {
       endpoint: `https://${env.CF_ACCOUNT_ID}.r2.cloudflarestorage.com`,
       // Pass credentials explicitly since we use R2_* naming instead of AWS_*
       credentials: {
