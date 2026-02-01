@@ -64,7 +64,7 @@ export async function mountR2Storage(sandbox: Sandbox, env: MoltbotEnv): Promise
       endpoint: `https://${env.CF_ACCOUNT_ID}.r2.cloudflarestorage.com`,
       // Pass credentials explicitly since we use R2_* naming instead of AWS_*
       credentials: {
-        accessKeyId: env.R2_ACCESS_KEY_ID,
+        accessKeyId: env.R2_ACSS_KEY_ID,
         secretAccessKey: env.R2_SECRET_ACCESS_KEY,
       },
     });
